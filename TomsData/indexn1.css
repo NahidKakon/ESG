@@ -1,251 +1,151 @@
+/* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e9ecef;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Ensures content doesn't overflow the container */
-    border: 3px solid #b76d05; /* Increased border size */
-}
-
-h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-th, td {
-    padding: 8px; /* Reduced padding for a more compact look */
-    text-align: left;
-    border: 1px solid #dee2e6;
-}
-
-th {
-    background-color: #f8f9fa;
-    font-weight: bold;
-}
-
-td {
-    background-color: #fdfdfd;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 500;
-    color: #495057;
-}
-
-input[type="text"],
-select {
-    width: 100%;
-    padding: 8px; /* Adjusted padding for a snug fit */
-    margin: 0;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-input[type="text"]:focus,
-select:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-button {
-    width: 50%;
-    padding: 10px; /* Adjusted padding for consistency */
-    margin: 20px auto;
-    background-color: rgb(5, 68, 26);
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-    display: block;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-@media (max-width: 768px) {
-    table {
-        font-size: 12px; /* Reduced font size for smaller screens */
-    }
-
-    button {
-        width: 100%;
-        color:rgb(4, 88, 37);
-    }
-}
-
-
-/* For Calculator */
-.modal-header, h4, .close {
-    background-color: #d38404;
-    color: white !important;
-    text-align: center;
-    font-size: 30px;
-  }
-  .modal-footer {
-    background-color: hsl(0, 85%, 16%);
-  }
-  img {
-    border: 0px solid #320202;
-    border-radius: 4px;
-    padding: 5px;
-    width: 350px;
-  }
-  div.absolute {
-    position: absolute;
-    top: 80px;
-    right: 180px;
-    width: 850px;
-    height: 700px;
-    border: 3px solid #0d9eec;
-  }
-  /* Move the Login button to the right */
-  
-  #myBtn {
-    float: center;
-    margin-trim: 80px; /* Adjust this value as needed */
-    color:white;
-    background-color: hsla(36, 82%, 50%, 0.938)
-  }
-
-
-#myBtn1 {
-  float: center;
-  margin-trim: 80px; /* Adjust this value as needed */
-  color:white;
-  font-size: 40px;
-  background-color: hsl(33, 94%, 27%)
-  
-
-}
-
-  /* for calculator */
-
-  body {
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: hwb(29 1% 81%);
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative; /* Necessary for absolute positioning of image 4 */
+}
+
+/* h1 Styles */
+h1 {
+    position: absolute;
+    top: 100px;
+    left: 220px;
     margin: 0;
+    font-size: 32px;
+    color: #333;
+    z-index: 10; /* Ensures h1 stays on top of other elements */
 }
 
-.calculator {
-    border: 1px solid #640b0bed;
-    padding: 20px;
-    background-color: #b36206;
-    border-radius: 5px;
-    box-shadow: 0 0 10px pink(160, 92, 169, 0.1);
-   animation: mymove 4s infinite;
-}
-
-  
-  @keyframes mymove {
-    from {background-color: #8f3114;}
-    to {background-color: rgb(8, 204, 239);}
-  }
-
-
-
-#display {
-    width: 100%;
-    height: 50px;
-    text-align: right;
-    padding: 10px;
-    font-size: 24px;
-    margin-bottom: 10px;
-    border: 1px solid #011f10d9;
-    border-radius: 5px;
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-button {
-    width: 100%;
-    height: 50px;
-    font-size: 24px;
-    border: 1px solid #be390c;
-    border-radius: 5px;
-    background-color: #ea8007;
-    cursor: pointer;
-    /*transition: background-color 0.2s, transform 0.2s;*/
-}
-
-button:hover {
-    background-color: hsl(15, 92%, 40%);
-}
-  
- /*.button:active {
-    background-color: #884141;
-    box-shadow: 0 10px #837c7c;
-    /*transform: scale(0.95);*/
-  
-  .Paragraph
-{
-	text-align: center;
-    font-size: 26px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(58, 2, 2);
-    font-weight: bold;
-}
-
-
-.button:active {
-  background-color: hsl(60, 27%, 85%);
-  box-shadow: 0 5px #0c7ccc;
-  transform: translateY(26px);
-}
-
-.button1 {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Stack image and buttons vertically */
+    align-items: center; /* Center items horizontally */
     text-align: center;
+    padding: 20px;
+    margin-top: 60px; /* Create space under h1 */
+}
+
+/* Container for Image 3 and Buttons */
+.center-container {
+    display: flex;
+    align-items: center; /* Align items vertically center */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between image and buttons */
+    margin-bottom: 20px; /* Space between the main container and image 4 */
+}
+
+/* Image Container */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container a {
+    display: block;
+    margin: 10px 0; /* Vertical spacing between buttons */
+    padding: 15px 25px;
+    font-size: 16px;
     text-decoration: none;
-    outline: none;
-    color: #bb3232;
-    background-color: hsl(198, 91%, 46%);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #ed6464;
-  }
-  
-  .button1:hover {background-color: #e95404}
-  
-  .button1:active {
-    background-color: #11a2d7;
-    box-shadow: 0 5px #013c5a;
-    transform: translateY(18px);
-  }
+    border-radius: 5px;
+    background-color: #ea9d0e;
+    color: #fff;
+}
+
+.button-container a:hover {
+    background-color: #b38f00;
+}
+
+/* Container for Image 4 */
+.image-four-container {
+    position: absolute;
+    bottom: 0px; /* Adjust this value for vertical positioning */
+    right: 50px;  /* Adjust this value for horizontal positioning */
+}
+
+.image-four-container img {
+    border-radius: 50%;
+    margin: 2px; /* Adjusted margin */
+    width: 180px; /* Adjust size as needed */
+    height: 160px; /* Adjust size as needed */
+}
+
+div {
+
+    /* Style for the image */
+.top-left-image {
+   position: absolute;  /* Allows specific positioning */
+   top: 150px;  /* Adjust vertical position */
+   left: 100px;  /* Adjust horizontal position */
+   width: 200px;  /* Set image width */
+   height: auto;  /* Keep aspect ratio */
+
+   border: 1px solid black;
+   margin-top: 100px;
+   margin-bottom: 100px;
+   margin-right: 150px;
+   margin-left: 80px;
+   background-color: white;
+ }
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.logo img {
+    height: 50px; /* Adjust the logo size */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    background-color: hsl(61, 80%, 46%);
+    border-radius: 5px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+}
